@@ -12,25 +12,26 @@ class SearchBar extends Component {
   }
 
   onInputChange(event){
-    console.log(event.target.value);
+    // console.log(event.target.value);
     this.setState({
       term: event.target.value
     });
   }
 
   onFormSubmit(event){
-      event.preventDefault();
+    event.preventDefault();
 
-      this.props.fetchWeather(this.state.term);
-      this.setState({
-        term: ''
-      });
+    this.props.fetchWeather(this.state.term);
+    this.setState({
+      term: ''
+    });
   }
 
   render(){
     return (
       <form onSubmit={this.onFormSubmit.bind(this)} className="input-group">
         <input
+          autoComplete="on"
           placeholder="Get a five day forecast in your favorite city"
           className="form-control"
           value={this.state.term}
