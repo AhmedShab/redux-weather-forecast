@@ -32,7 +32,7 @@ class SearchBar extends Component {
       <form onSubmit={this.onFormSubmit.bind(this)} className="input-group">
         <input
           autoComplete="on"
-          placeholder="Get a five day forecast in your favorite city"
+          placeholder="Get a five day forecast in your favorite cities"
           className="form-control"
           value={this.state.term}
           onChange={this.onInputChange.bind(this)}/>
